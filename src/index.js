@@ -25,12 +25,22 @@ const understanding = (state = 1, action) => {
     return state;
 }
 
+const support = (state = 1, action) => {
+    if (action.type === 'SET_SUPPORT') {
+        // dispatch will have type of 'SET_SUPPORT'
+        // and payload with the value to set
+        return action.payload
+    }
+    return state;
+}
+
 // Redux store to keep track of all reducers.
 const storeInstance = createStore(
     combineReducers(
         {
            feeling,
-           understanding, 
+           understanding,
+           support, 
         }
     ),
     applyMiddleware(logger)
