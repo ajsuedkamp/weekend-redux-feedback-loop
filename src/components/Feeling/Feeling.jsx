@@ -1,8 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
+// history allows us to navigate to a different page
 import { useHistory } from 'react-router-dom';
 
 
 const Feeling = () => {
+    const history = useHistory();
+
     const feeling = useSelector(store => store.feeling); // getter
     const dispatch = useDispatch();
 
@@ -20,7 +23,7 @@ const Feeling = () => {
                        className="input" type="number" min="1" max="5"
                 >
                 </input>
-                <button className="button">Next</button>
+                <button onClick={() => history.push('/understanding')} className="button">Next</button>
             </div>
         </>
 

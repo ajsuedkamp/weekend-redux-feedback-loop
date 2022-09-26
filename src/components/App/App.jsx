@@ -19,13 +19,13 @@ function App() {
         <Route exact path="/">
          <Feeling />
         </Route>
-        <Route exact path="/2">
+        <Route exact path="/understanding">
           <Understanding />
         </Route>
-        <Route exact path="/3">
+        <Route exact path="/support">
           <Support />
         </Route>
-        <Route exact path="/4">
+        <Route exact path="/comments">
           <Comments />
         </Route>
       </Router>
