@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 
 
 const Comments = () => {
+    const history = useHistory();
+    
     const comments = useSelector(store => store.comments); //getter
     const dispatch = useDispatch();
 
@@ -21,7 +23,7 @@ const Comments = () => {
                        className="input" type="text">
 
                 </input>
-                <button className="button">Next</button>
+                <button onClick={() => history.push('/review')} className="button">Next</button>
             </div>
         </>
 
