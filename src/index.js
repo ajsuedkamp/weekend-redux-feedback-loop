@@ -34,13 +34,23 @@ const support = (state = 1, action) => {
     return state;
 }
 
+const comments = (state = '', action) => {
+    if (action.type === 'SET_COMMENTS') {
+        // dispatch will have type of 'SET_COMMENTS'
+        // and payload with value to set
+        return action.payload
+    }
+    return state;
+}
+
 // Redux store to keep track of all reducers.
 const storeInstance = createStore(
     combineReducers(
         {
            feeling,
            understanding,
-           support, 
+           support,
+           comments, 
         }
     ),
     applyMiddleware(logger)
