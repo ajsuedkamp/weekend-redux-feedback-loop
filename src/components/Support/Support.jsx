@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 
 const Support = () => {
+    // use history to navigate to comments page
+    const history = useHistory();
+
+
     const support = useSelector(store => store.support); //getter
     const dispatch = useDispatch();
 
@@ -21,7 +25,7 @@ const Support = () => {
                        className="input" type="number" min="1" max="5"
                 >
                 </input>
-                <button className="button">Next</button>
+                <button onClick={() => history.push('/comments')} className="button">Next</button>
             </div>
         </>
     )

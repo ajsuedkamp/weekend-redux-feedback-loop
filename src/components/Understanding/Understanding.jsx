@@ -3,6 +3,10 @@ import { useHistory } from 'react-router-dom';
 
 
 const Understanding = () => {
+    // again use history to navigate to support page
+    const history = useHistory();
+
+
     const understanding = useSelector(store => store.understanding); // getter
     const dispatch = useDispatch();
 
@@ -21,7 +25,7 @@ const Understanding = () => {
                        className="input" type="number" min="1" max="5"
                 >
                 </input>
-                <button className="button">Next</button>
+                <button onClick={() => history.push('/support')} className="button">Next</button>
             </div>
         </>
 
