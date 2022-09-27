@@ -25,7 +25,7 @@ const Review = () => {
                 comments: comments
             }
         }).then((response) => {
-            history.push('/');
+            history.push('/complete');
         }).catch((error) => {
             console.log(error);
             alert('Something went wrong!')
