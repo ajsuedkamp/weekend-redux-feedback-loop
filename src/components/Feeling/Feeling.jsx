@@ -17,14 +17,16 @@ const Feeling = () => {
         <>
             <h1>How are you feeling today?</h1>
             <h3>Feeling?</h3>
-            <div>
-                {/* getter and setter */}
-                <input value={feeling} onChange={handleChange}
-                       className="input" type="number" min="1" max="5"
-                >
-                </input>
-                <button onClick={() => history.push('/understanding')} className="button">Next</button>
-            </div>
+            <form>
+                <div>
+                    {/* getter and setter */}
+                    <input value={feeling} onChange={handleChange}
+                        className="input" type="number" min="1" max="5"
+                    >
+                    </input>
+                    <button onClick={() => history.push('/understanding')} className="button">Next</button>
+                </div>
+            </form>
         </>
 
     )

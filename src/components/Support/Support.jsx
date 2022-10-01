@@ -19,14 +19,16 @@ const Support = () => {
         <>
             <h1>How well are you being supported?</h1>
             <h3>Support?</h3>
-            <div>
-                {/* getter and setter */}
-                <input value={support} onChange={handleChange}
-                       className="input" type="number" min="1" max="5"
-                >
-                </input>
-                <button onClick={() => history.push('/comments')} className="button">Next</button>
-            </div>
+            <form>
+                <div>
+                    {/* getter and setter */}
+                    <input value={support} onChange={handleChange}
+                        className="input" type="number" min="1" max="5"
+                    >
+                    </input>
+                    <button onClick={() => history.push('/comments')} className="button">Next</button>
+                </div>
+            </form>
         </>
     )
 }

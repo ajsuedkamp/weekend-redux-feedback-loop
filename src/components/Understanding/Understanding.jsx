@@ -19,14 +19,16 @@ const Understanding = () => {
         <>
             <h1>How well are you understanding the content?</h1>
             <h3>Understanding?</h3>
-            <div>
-                {/* getter and setter */}
-                <input value={understanding} onChange={handleChange}
-                       className="input" type="number" min="1" max="5"
-                >
-                </input>
-                <button onClick={() => history.push('/support')} className="button">Next</button>
-            </div>
+            <form>
+                <div>
+                    {/* getter and setter */}
+                    <input value={understanding} onChange={handleChange}
+                        className="input" type="number" min="1" max="5"
+                    >
+                    </input>
+                    <button onClick={() => history.push('/support')} className="button">Next</button>
+                </div>
+            </form>
         </>
 
     )
